@@ -1,0 +1,31 @@
+- var orgs = orgs || {};
+
+extends layout
+title OpenSource Organizations
+
+block stylesheets
+  if (isProduction || isStaging)
+    link(rel="stylesheet", href="/stylesheets/dist/index-#{version}.min.css", media= "screen")
+  else
+    link(rel='stylesheet', href='/stylesheets/shared.css')
+    link(rel='stylesheet', href='/stylesheets/index.css')
+
+block content
+  include elements/google_analytics
+  header
+  #buttons
+    include elements/tweet
+    include elements/github
+
+  #content
+  div.indicator
+    i(class="fa fa-spinner fa-spin")
+  footer
+
+block scripts
+  if (isProduction || isStaging)
+    script(src="/javascripts/dist/index-#{version}.min.js")
+  else
+    script(src="/javascripts/utils.js")
+    script(src="/javascripts/shared.js")
+    script(src="/javascripts/index.js")

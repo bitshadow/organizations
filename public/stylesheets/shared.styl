@@ -1,0 +1,91 @@
+*, *:after, *:before
+  -moz-box-sizing border-box
+  -webkit-box-sizing border-box
+  box-sizing border-box
+
+html
+  background-color #fff
+
+body
+  color #555
+  font 14px "Lucida Grande", Helvetica, Arial, sans-serif
+  padding 10px 50px
+a
+  color #6f92ba
+  text-decoration none
+
+img
+  width 100%
+  height 100%
+
+ul.orgs
+    list-style-type none
+    margin 0
+    padding 0
+
+ul.orgs
+  // width 100%
+  // text-align justify
+  li.org
+    float left
+    width 325px
+    padding 20px
+    margin 10px
+    border-radius 5px
+    color #333
+    border-radius 4px
+    -moz-box-shadow 0 0 16px rgba(100,100,100,0.5)
+    -webkit-box-shadow 0 0 16px rgba(100,100,100,0.5)
+    box-shadow 0 0 16px rgba(100,100,100,0.5)
+  li.org:hover
+    -moz-box-shadow 0 0 16px rgba(0,150,200,0.5)
+    -webkit-box-shadow 0 0 16px rgba(0,150,200,0.5)
+    box-shadow 0 0 16px rgba(0,150,200,0.5)
+
+ul.orgs:after
+  content ""
+  width 325px
+  display inline-block
+  zoom 1
+  *display inline
+
+.heading
+  // text-transform uppercase
+  margin 10px 0
+  text-align center
+
+.clearfix
+    display inline-block
+    width 100%
+
+#content
+  margin 0 auto
+
+.info
+  padding 0
+  .details
+    padding 10px
+    border-radius 5px
+    background-color #eee
+    width 100%
+    line-height 20px
+    float left
+    margin-top 20px
+    word-wrap break-word
+  .avatar
+    float left
+    width 285px
+    height 285px
+    img
+      border-radius 6px
+
+i
+  color #696969
+  display inline
+
+.fa
+  display inline
+
+.subtle
+  font-weight 500
+  font-size 14px

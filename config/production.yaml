@@ -1,0 +1,10 @@
+db:
+  database:
+  hostname:
+  port:
+  username:
+  password:
+  readPreference: primary
+
+mongoose:
+  debug: false

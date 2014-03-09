@@ -1,0 +1,11 @@
+db:
+  database: bakar
+  hostname: localhost
+  port: 27017
+  username:
+  password:
+  readPreference: primary
+
+
+mongoose:
+  debug: false

@@ -1,0 +1,24 @@
+- var orgs = orgs || {};
+
+extends layout
+
+block stylesheets
+  if (isProduction || isStaging)
+    link(rel="stylesheet", href="/stylesheets/dist/random-#{version}.min.css", media= "screen")
+  else
+    link(rel='stylesheet', href='/stylesheets/shared.css')
+    link(rel='stylesheet', href='/stylesheets/random.css')
+
+block content
+  include elements/google_analytics
+  a(href="/random" class="refresh")
+    i(class="fa fa-refresh fa-spin")
+  #content
+
+block scripts
+  if (isProduction || isStaging)
+    script(src="/javascripts/dist/random-#{version}.min.js")
+  else
+    script(src="/javascripts/utils.js")
+    script(src="/javascripts/shared.js")
+    script(src="/javascripts/random.js")

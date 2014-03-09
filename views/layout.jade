@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    if(isDevelopment)
+      link(rel="stylesheet" href="/stylesheets/vendor/font-awesome.css?v=4.0.3")
+      link(rel="stylesheet" href="/stylesheets/style.css")
+    block stylesheets
+
+  body
+    block content
+
+    if (isDevelopment)
+      script(src="/javascripts/lib/jquery-1.9.1.min.js")
+      script(src="/javascripts/lib/underscore-1.4.4.js")
+      script(src="/javascripts/lib/backbone.js")
+      script(src="/javascripts/lib/masonry.min.js")
+    script.
+      Organizations = window.Organizations || {};
+      Organizations.version = "!{version}";
+      Organizations.orgs = !{JSON.stringify(orgs)}
+
+    block scripts
